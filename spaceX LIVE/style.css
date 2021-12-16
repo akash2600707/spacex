@@ -24,11 +24,12 @@ nav .menu{
   justify-content: space-between;
   padding: 0 20px;
 }
-#logo{ 
-	position:fixed; 
-	top:0; 
-	left:0; 
-} 
+.menu .logo a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
 .menu ul{
   display: inline-flex;
 }
