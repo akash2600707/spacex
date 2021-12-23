@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<title>Ticketary.com</title>
+<link rel="icon" href="ticket.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", Arial, Helvetica, sans-serif
+    }
+
+    .myLink {
+        display: none
+    }
+</style>
+
+<body class="Tb-light-grey">
+
+    <!-- Navigation Bar -->
+    <div class="Tb-bar Tb-white Tb-border-bottom Tb-xlarge">
+        <a href="#" class="Tb-bar-item Tb-button Tb-text-red Tb-hover-red">
+            <b><i class="fa fa-ticket Tb-margin-right"></i>Ticketary.com</b></a>
+        <a href="#" class="Tb-bar-item Tb-button Tb-right Tb-hover-red Tb-text-grey"><i class="fa fa-search"></i></a>
+    </div>
+
+    <!-- Header -->
+    <header class="Tb-display-container Tb-content Tb-hide-small" style="max-width:1500px">
+        <img class="Tb-image" src="london2.jpg" alt="London" width="1500" height="700">
+        <div class="Tb-display-middle" style="width:65%">
+            <div class="Tb-bar Tb-black">
+
+                <button class="Tb-bar-item Tb-button tablink" onclick="openLink(event, 'Flight');"><i
+                        class="fa fa-plane Tb-margin-right"></i>Flight</button>
+                <button class="Tb-bar-item Tb-button tablink" onclick="openLink(event, 'Bus');"><i
+                        class="fa fa-bus Tb-margin-right"></i>Bus</button>
+                <button class="Tb-bar-item Tb-button tablink" onclick="openLink(event, 'Hotel');"><i
+                        class="fa fa-bed Tb-margin-right"></i>Hotel</button>
+                <button class="Tb-bar-item Tb-button tablink" onclick="openLink(event, 'Car');"><i
+                        class="fa fa-car Tb-margin-right"></i>Rental</button>
+            </div>
+
+            <!-- Tabs -->
+            <div id="Flight" class="Tb-container Tb-white Tb-padding-16 myLink">
+                <h3>Travel the world with us</h3>
+                <div class="Tb-row-padding" style="margin:0 -16px;">
+                    <div class="Tb-half">
+                        <label>From</label>
+                        <input class="Tb-input Tb-border" type="text" placeholder="Departing from">
+                    </div>
+                    <div class="Tb-half">
+                        <label>To</label>
+                        <input class="Tb-input Tb-border" type="text" placeholder="Arriving at">
+                    </div>
+                </div>
+                <p><button class="Tb-button Tb-dark-grey">Search and find dates</button></p>
+            </div>
+            <div id="Bus" class="Tb-container Tb-white Tb-padding-16 myLink">
+                <h3>Travel the world with us</h3>
+                <div class="Tb-row-padding" style="margin:0 -16px;">
+                    <div class="Tb-half">
+                        <label>From</label>
+                        <input class="Tb-input Tb-border" type="text" placeholder="from">
+                    </div>
+                    <div class="Tb-half">
+                        <label>To</label>
+                        <input class="Tb-input Tb-border" type="text" placeholder="TO">
+                    </div>
+                </div>
+                <p><button class="Tb-button Tb-dark-grey">Search and find dates</button></p>
+            </div>
+
+            <div id="Hotel" class="Tb-container Tb-white Tb-padding-16 myLink">
+                <h3>Find the best hotels</h3>
+                <p>Book a hotel with us and get the best fares and promotions.</p>
+                <p>We know hotels - we know comfort.</p>
+                <p><button class="Tb-button Tb-dark-grey">Search Hotels</button></p>
+            </div>
+
+            <div id="Car" class="Tb-container Tb-white Tb-padding-16 myLink">
+                <h3>Best car rental in the world!</h3>
+                <input class="Tb-input Tb-border" type="text" placeholder="Pick-up point">
+                <p><button class="Tb-button Tb-dark-grey">Search Availability</button></p>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Contact -->
+    <div class="Tb-container">
+        <h2>Contact</h2>
+        <p>Let us book your next trip!</p>
+        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +1 628215<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: Ticketary@mail.com<br>
+        <form action="/action_page.php" target="_blank">
+            <p><input class="Tb-input Tb-padding-16 Tb-border" type="text" placeholder="Name" required name="Name">
+            </p>
+            <p><input class="Tb-input Tb-padding-16 Tb-border" type="text" placeholder="Email" required name="Email">
+            </p>
+            <p><input class="Tb-input Tb-padding-16 Tb-border" type="text" placeholder="Message" required
+                    name="Message"></p>
+            <p><button class="Tb-button Tb-black Tb-padding-large" type="submit">SEND MESSAGE</button></p>
+        </form>
+    </div>
+
+    <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="Tb-container Tb-center Tb-opacity Tb-margin-bottom">
+        <h5>Find Us On</h5>
+        <div class="Tb-xlarge Tb-padding-16">
+            <i class="fa fa-facebook-official Tb-hover-opacity"></i>
+            <i class="fa fa-instagram Tb-hover-opacity"></i>
+            <i class="fa fa-snapchat Tb-hover-opacity"></i>
+            <i class="fa fa-pinterest-p Tb-hover-opacity"></i>
+            <i class="fa fa-twitter Tb-hover-opacity"></i>
+            <i class="fa fa-linkedin Tb-hover-opacity"></i>
+        </div>
+        <p>Powered by <a href="https://tamilanbus.Tbspaces.com/" target="_blank"
+                class="Tb-hover-text-red">Ticketary.com</a></p>
+    </footer>
+
+    <script>
+        // Tabs
+        function openLink(evt, linkName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("myLink");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" Tb-red", "");
+            }
+            document.getElementById(linkName).style.display = "block";
+            evt.currentTarget.className += " Tb-red";
+        }
+
+        // Click on the first tablink on load
+        document.getElementsByClassName("tablink")[0].click();
+    </script>
+
+</body>
+
+</html>
