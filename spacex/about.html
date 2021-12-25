@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aboutstyle.css">
+</head>
+<body>
+    <nav>
+        <div class="menu">
+            <ul>
+                <li><a button onclick="goBack()">Back</a></li> 
+            </ul>
+           
+                
+        </div>
+    </nav>
+    <div class="about-section">
+        <h1>About Us Page</h1>
+        <p>Some text about who we are and what we do.</p>
+        <p>Resize the browser window to see that this page is responsive by the way.</p>
+    </div>
+    
+    <h2 style="text-align:center">Our Team</h2>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="image/Akash.jpg" alt="AKASH" style="width:100%">
+                <div class="container">
+                    <h2>Akash</h2>
+                    <p class="title">Member</p>
+                    <p>jane@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="column">
+            <div class="card">
+                <img src="/w3images/team2.jpg" alt="Siva" style="width:100%">
+                <div class="container">
+                    <h2>Siva Shanmugam</h2>
+                    <p class="title">Member</p>
+                    <p>mike@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="column">
+            <div class="card">
+                <img src="/w3images/team3.jpg" alt="vishal" style="width:100%">
+                <div class="container">
+                    <h2>Vishal</h2>
+                    <p class="title">Member</p>
+                    <p>john@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    function goBack() {
+        window.history.back()
+    }
+</script>
+
+</html>
