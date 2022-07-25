@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CUAD.css">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="container">
+        <form action="mailto:akashramesh2607@gmail.com" onsubmit="return validateForm()">
+      
+          <label for="name">Name</label>
+          <input type="text" id="fname" name="name" placeholder="Your name.." required maxlength="50">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" placeholder="Your Email id.." required>
+          <label for="pno">PHONE NUMBER</label>
+          <input type="number" id="pno" name="pno" placeholder="Your phone number.." class="phone required" required >
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+</body>
+<script type="text/javascript">
+    var $el = {
+      phone: $('[name=phone]'),
+    }
+    var regex = {
+phone: {
+sg: /^(\d{4})(\d{4})$/,
+us: /^1?(\d{3})(\d{3})(\d{4})$/,
+}
+};
+
+// Custom phone number validation
+function validatePhone(value, el) {
+// Get country code
+var cc = $el.country.val();
+// Normalize value
+value = $.trim(value).replace(/\D/g, '');
+// Validate!
+var re = regex.phone[cc],
+isOptional = this.optional(el),
+isValid = value.length > 7 && re.test(value);
+if (isValid) {
+switch (cc) {
+  case 'sg':
+    // Output nicely formatted Singapore phone number
+    el.value = value.replace(re, '$1-$2');
+    break;
+  case 'us':
+    // Output nicely formatted US phone number
+    el.value = value.replace(re, '($1) $2-$3');
+    break;
+  default:
+    el.value = value;
+}
+}
+return isOptional || isValid;
+}
+
+// Add custom validator method for inputs with "phone" class
+$.validator.addMethod('phone', validatePhone, 'Invalid phone number.');
+
+// Validate form
+$el.form.validate({
+onkeyup: false
+});
+
+$el.country.change(function() {
+// Re-validate phone number
+$el.phone.valid();
+// Or re-validate entire form
+//$el.form.valid();
+});
+
+  </script>
+</html>
