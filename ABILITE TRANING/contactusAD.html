@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CUAD.css">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="container">
+        <form name="form1" action="mailto:akashramesh2607@gmail.com">
+      
+          <label for="name">Name</label>
+          <input type="text" id="fname" name="name" placeholder="Your name.." required maxlength="50">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" placeholder="Your Email id.." required>
+          <label for="phonenumber" class="text">PHONE NUMBER</label>
+          <input type="text" id="phonenumber" name="phonenumber" placeholder="Your phone number.." class="number"  required >
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+      
+          <input type="submit" value="submit" class="check">
+      
+        </form>
+      </div>
+</body>
+<script>
+
+let check=document.querySelector(".check");
+let number=document.querySelector(".number");
+let text=document.querySelector(".text");
+
+let regex= /^[\d,\s,\+,\-]{5,20}/;
+
+check.addEventListener("click",()=>{
+  if(number.value ==""){
+    text.innerText="enter valid phone number";
+    text.style.color="#fff";
+  }
+  else (number.value.match(regex))
+  {
+    text.innerText="enter valid phone number";
+    text.style.color="#fff";
+  }
+  });
+
+</script>
+</html>
