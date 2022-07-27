@@ -10,6 +10,7 @@ body {
             rgb(4, 109, 91) 100%);
     color: white;
     padding: 40px;
+    align-text:center;
 }
 
 .invalid {
